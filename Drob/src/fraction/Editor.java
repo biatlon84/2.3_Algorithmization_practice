@@ -1,14 +1,16 @@
 package fraction;
 
 public class Editor {
-	public static Fracti getM(Fracti fr, long l) {
+	public static Fracti[] getM(Fracti[] fr, long minC) {
 		long x;
-		// System.out.print(e);
-
-		x = l / fr.den;
-		fr.numerator = fr.numerator * x;
-		fr.den = l;
-
+		Fracti f;
+		for (int i = 0; i < fr.length; i++) {
+			f = fr[i];
+			x = minC / f.den;
+			f.numerator = f.numerator * x;
+			f.den = minC;
+			fr[i] = f;
+		}
 		return fr;
 	}
 }

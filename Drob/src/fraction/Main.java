@@ -1,37 +1,39 @@
 package fraction;
 
-import java.util.ArrayList;
-
+//finding a common denominator and sorting
 public class Main {
 	public static void main(String args[]) {
-		int z = 3;
+		int z = 2;
 		long ev;
 		long l = 0;
-		Fab_dr arL = new Fab_dr(z);
+		ArOfFra arL = new ArOfFra(z);
 		Fracti[] F = new Fracti[z];
 		Denominator den = new Denominator();
-		ArrayList<Fracti> list = new ArrayList<Fracti>();
-		list = arL.get(90); // Create array of fractions
+
+		arL.generate(90); // Filling array of fractions
 		for (int i = 0; i < z; i++) {
-			F[i] = list.get(i);
+			F[i] = arL.getO(i);
 
 		}
 
 		ev = Evclid.getDen(den.getArr(F));
 		l = Multiplier.getM(den.getArr(F));
-		for (int i = 0; i < list.size(); i++) {
-			// System.out.println(den.getArr(F)[i]);
-			System.out.println(list.get(i));
-		}
-		System.out.println("" + l + " " + ev);
-		for (int i = 0; i < z; i++) {
-			list.set(i, Editor.getM(list.get(i), l / ev));
-		}
-		// Test_speed.start();
-		for (int i = 0; i < list.size(); i++) {
-			// System.out.println(den.getArr(F)[i]);
-			System.out.println(list.get(i));
+
+		for (int i = 0; i < arL.size(); i++) {
+			System.out.println(arL.getO(i));
 		}
 
+		System.out.println("" + l + " " + ev);
+		Editor.getM(arL.dr, l / ev);
+
+		for (int i = 0; i < arL.size(); i++) {
+			System.out.println(arL.getO(i));
+		}
+		arL.sort();
+		System.out.println("sort");
+		for (int i = 0; i < arL.size(); i++) {
+			System.out.println(arL.getO(i));
+		}
+		// Test_speed.start();
 	}
 }

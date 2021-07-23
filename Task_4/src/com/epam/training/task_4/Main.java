@@ -8,5 +8,8 @@ public class Main {
 		pri.pw(ar);
 		bubble.sort(ar, 0, 14);
 		pri.pw(ar);
+		System.out.print("\nPassages" + bubble.coun);
+		System.out.print("\nSwaps" + bubble.counS);
+		System.out.print("\n" + (double) bubble.counS / bubble.coun);
 	}
 }

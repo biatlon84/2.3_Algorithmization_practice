@@ -2,6 +2,7 @@ package com.epam.training.task_4;
 
 public class bubble {
 	public static int coun = 0;
+	public static int counS = 0;
 
 	public static void sort(int[] array, int low, int high) {
 		boolean w = true;
@@ -16,6 +17,7 @@ public class bubble {
 					array[i] = array[i - 1];
 					array[i - 1] = bu;
 					w = true;
+					counS++;
 				}
 				i++;
 			}
@@ -35,6 +37,7 @@ public class bubble {
 					array[i] = array[i - 1];
 					array[i - 1] = bu;
 					w = true;
+					counS++;
 				}
 				i++;
 			}

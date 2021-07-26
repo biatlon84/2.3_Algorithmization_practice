@@ -7,7 +7,7 @@ public class Main {
 		long ev;
 		long l = 0;
 		ArOfFra arL = new ArOfFra(z);
-		Fracti[] F = new Fracti[z];
+		Fraction[] F = new Fraction[z];
 		Denominator den = new Denominator();
 
 		arL.generate(90); // Filling array of fractions

@@ -1,11 +1,11 @@
 package fraction;
 
-public class Fracti {
+public class Fraction {
 
 	public long den = 1;
 	public long numerator = 1;
 
-	public Fracti(int x, int y) {
+	public Fraction(int x, int y) {
 		den = x;
 		numerator = y;
 	}

@@ -18,8 +18,12 @@ public class Main {
 			ar2[i] = ar1[i];
 		}
 		// ---------
+		System.out.print("The two-piece array:");
 		pri.pw(ar2);
+
 		Joiner.join2(ar2, m);
+
+		System.out.print("\nAfter joining");
 		pri.pw(ar2);
 	}
 }

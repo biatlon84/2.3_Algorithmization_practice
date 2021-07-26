@@ -1,9 +1,9 @@
 package fraction;
 
 public class Editor {
-	public static Fracti[] getM(Fracti[] fr, long minC) {
+	public static Fraction[] getM(Fraction[] fr, long minC) {
 		long x;
-		Fracti f;
+		Fraction f;
 		for (int i = 0; i < fr.length; i++) {
 			f = fr[i];
 			x = minC / f.den;

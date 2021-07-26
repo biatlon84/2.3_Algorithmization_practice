@@ -5,13 +5,13 @@ public class ArrayZ {
 	public ArrayZ(int z) {
 		super();
 		this.z = z;
-		dr = new Fracti[z];
+		dr = new Fraction[z];
 	}
 
 	public int z;
-	public Fracti[] dr;
+	public Fraction[] dr;
 
-	public Fracti getO(int i) {
+	public Fraction getO(int i) {
 		return dr[i];
 	}
 

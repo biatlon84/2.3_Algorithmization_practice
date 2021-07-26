@@ -8,7 +8,7 @@ public class ArOfFra extends ArrayZ {
 
 	public void generate(int lim) {
 		for (int i = 0; i < z; i++) {
-			dr[i] = (new Fracti((int) (Math.random() * lim + 1), (int) (Math.random() * lim + 1)));
+			dr[i] = (new Fraction((int) (Math.random() * lim + 1), (int) (Math.random() * lim + 1)));
 		}
 	}
 
@@ -17,12 +17,12 @@ public class ArOfFra extends ArrayZ {
 	}
 
 	private void swap(int i, int j) {
-		Fracti bu = dr[i];
+		Fraction bu = dr[i];
 		dr[i] = dr[j];
 		dr[j] = bu;
 	}
 
-	private void quickSort(Fracti[] array, int low, int high) {
+	private void quickSort(Fraction[] array, int low, int high) {
 		if (low >= high)
 			return;
 		long opora;

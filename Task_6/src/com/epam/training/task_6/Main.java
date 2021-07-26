@@ -41,13 +41,13 @@ public class Main {
 		int i = 0;
 		pos = 0;
 		int cu = 0;
-		// Shell sort with Pratt-modified sequence
+		// Shell sort with modified step sequence
 		int[] arrOfSteps = new int[(int) (Math.log(high) / Math.log(2)) + 1];
 		int sz = high, q = 1;
 		arrOfSteps[0] = 1;
 		while (arrOfSteps[q - 1] < sz) {
 			int s = arrOfSteps[q - 1];
-			arrOfSteps[q++] = s * 3 + s / 3; // Pratt-modified sequence
+			arrOfSteps[q++] = s * 3 + s / 3; // generate a sequence for changing the pitch
 		}
 		q--;
 		// Shell sort core
@@ -68,12 +68,6 @@ public class Main {
 			// step = 2;
 			q--;
 		}
-		// Сomb sorting
-		/*
-		 * for (int step = n / 2; step > 0; step /= 2) { for (int i = step; i < n; i++)
-		 * { for (int j = i - step; j >= 0 && a[j] > a[j + step] ; j -= step) { if(a[j]
-		 * > a[j + step]) { int x = a[j]; a[j] = a[j + step]; a[j + step] = x; } } } }
-		 */
 		System.out.print("\nShell sort, there were " + sh + " swaps:");
 		pri.pw(ar1);
 

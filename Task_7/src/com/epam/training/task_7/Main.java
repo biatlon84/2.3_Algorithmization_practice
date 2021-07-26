@@ -36,63 +36,20 @@ public class Main {
 		System.out.println(
 				"Answer: this are the positions in the first sequence where I should enter new numbers from second sequence");
 // the positions in the first sequence where I should enter new numbers
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			if (ar1In[i] < 0) {
-				System.out.printf("%2d", i + 1);
-			} else
-				System.out.print("  ");
-			System.out.print(" ");
-		}
+		Display.pos1(ar1In, ar2.length + ar1.length);
 		System.out.print("<PLs1\n");
-		// Display just ------------
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			System.out.print("---");
-		}
+		Display.e(ar2.length + ar1.length);// Display just ------------
 		System.out.print("\n");
-		pos = 0;
-		// Display first sequence
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			if (ar1In[i] > 0) {
-				System.out.printf("%2d", ar1[pos]);
-				pos++;
-			} else
-				System.out.print("  ");
-			System.out.print(" ");
-		}
+		Display.sequ1(ar1In, ar1, ar2);// Display first sequence
 		System.out.print("<SQ1\n");
-		// Display just "/\"
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			if (ar1In[i] < 0) {
-				System.out.print("/\\");
-			} else
-				System.out.print("  ");
-			System.out.print(" ");
-		}
+		Display.ar(ar1In, ar2.length + ar1.length);// Display just "/\"
 		System.out.print("\n");
-		pos = 0;
-		// Display second sequence
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			if (ar1In[i] < 0) {
-				System.out.printf("%2d", ar2[pos]);
-				pos++;
-			} else
-				System.out.print("  ");
-			System.out.print(" ");
-		}
-		// Display just ------------
+		Display.sequ2(ar1In, ar1, ar2);// Display second sequence
 		System.out.print("<SQ2\n");
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			System.out.print("---");
-		}
+		Display.e(ar2.length + ar1.length);// Display just ------------
 		System.out.print("\n");
 		// the positions in the second sequence where I should enter new numbers
-		for (i = 0; i < ar2.length + ar1.length; i++) {
-			if (ar1In[i] > 0) {
-				System.out.printf("%2d", i + 1);
-			} else
-				System.out.print("  ");
-			System.out.print(" ");
-		}
+		Display.pos2(ar1In, ar1.length + ar2.length);
 		System.out.print("<PLs2\nSpecial intermediate sequence");
 		pri.pw(ar1In);
 		System.out.print("\nWe replace this with a resulting array");

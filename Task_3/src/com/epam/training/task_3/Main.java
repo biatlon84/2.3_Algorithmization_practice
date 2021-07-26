@@ -24,6 +24,7 @@ public class Main {
 			ar[n] = ar[i];
 			ar[i] = max;
 		}
+		System.out.print("\nSort by selection, descending order");
 		pri.pw(ar);
 	}
 

@@ -1,6 +1,6 @@
 package com.epam.training.task_8;
 
-public class Evclid {
+public class Euclid {
 	public static long get(long a, long b) {
 		while ((a != 0) && (b != 0)) {
 			if (a > b) {

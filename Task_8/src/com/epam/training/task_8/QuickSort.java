@@ -14,29 +14,25 @@ public class QuickSort {
 	private static void quickSort(Array ar, int low, int high) {
 		if (low >= high)
 			return;
-		long opora;
-		int middle = low + (high - low) / 2;
-		opora = ar.getByIndex(middle).numerator;
+		long ref = ar.getByIndex(low + (high - low) / 2).numerator;
 		int i = low, j = high;
 		while (i <= j) {
-			while (ar.getByIndex(i).numerator < opora) {
+			while (ar.getByIndex(i).numerator < ref) {
 				i++;
 			}
-
-			while (ar.getByIndex(j).numerator > opora) {
+			while (ar.getByIndex(j).numerator > ref) {
 				j--;
 			}
-
 			if ((i <= j)) {
 				swap(ar, i, j);
 				i++;
 				j--;
 			}
 		}
-		if (low <= j)
+		if (low < j)
 			quickSort(ar, low, j);
 
-		if (high >= i)
+		if (high > i)
 			quickSort(ar, i, high);
 	}
 }
